@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <button onclick="click_fn()">按钮</button>
+</body>
+<script>
+    function click_fn() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", 'http://172.16.10.93:3002/voice', true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;");
+        xhr.onreadystatechange = function (e) {
+            if (this.readyState == '200') {
+               
+            }
+        };
+        xhr.send();
+    }
+</script>
+
+</html>
